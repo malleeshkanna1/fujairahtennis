@@ -1,0 +1,203 @@
+/* Mobile Navbar Main Styles */
+.menu-toggle-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow-y: auto;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.tennis_country_logo {
+  height: 40px; /* Adjust the logo size as needed */
+}
+
+.menu-close-btn {
+  background: none;
+  border: none;
+  color: #898989;
+
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.menu-close-btn {
+  display: flex;
+  align-items: center; /* Vertically centers the content */
+  justify-content: center; /* Horizontally centers the content */
+  padding: 0.5rem 1rem; /* Optional, adjust padding as needed */
+}
+
+.menu-close-btn .d-flex {
+  display: flex;
+  align-items: center; /* Vertically align the text and the icon */
+}
+
+.menu-close-btn .bx-x {
+  margin-left: 0.5rem; /* Optional: space between text and icon */
+  transition: transform 0.3s ease;
+}
+
+.menu-close-btn:hover .bx-x {
+  transform: rotate(180deg); /* Rotate the X on hover */
+}
+
+
+.btn-x {
+  transition: transform 0.3s ease;
+}
+
+.btn-x:hover {
+  transform: rotate(180deg); /* Rotate the X by 180 degrees */
+}
+
+
+.menu-popup-content {
+  margin-top: 20px;
+}
+
+.menu-sidebar {
+  width: 50%;
+}
+
+.menu-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list li {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: #D0D0D0;
+  cursor: pointer;
+  transition: color 0.3s;
+  line-height: 1.5em;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  text-align: left;
+  transition-duration: 0.5s;
+  font-family: Montserrat, sans-serif  ;
+}
+
+.menu-list li:hover {
+  color: #ffffff; /* Hover color */
+  transition-duration: 0.5s;
+
+}
+
+.menu-footer {
+  padding-top: 20px;
+  font-size: 14px;
+  color: white;
+}
+
+.menu-footer a {
+  color: #1e90ff; /* Blue color for links */
+  text-decoration: none;
+}
+
+.menu-footer a:hover {
+  text-decoration: underline;
+}
+
+.close-btn{
+  color: #898989;
+}
+
+.text_highlight{
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #D0D0D0;
+  cursor: pointer;
+  transition: color 0.3s;
+  line-height: 1.5em;
+  font-weight: bold;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  text-align: left;
+  transition-duration: 0.5s;
+  font-family: Montserrat, sans-serif  ;
+}
+
+.text_highlight a{
+  color: #D0D0D0;
+}
+
+.text_highlight a {
+  position: relative;
+  color: inherit; /* Inherit color from parent */
+  font-size: 1.3em;
+  margin-top: 10px;
+}
+
+.text_highlight a:hover {
+  text-decoration: none;
+}
+
+.text_highlight a::after {
+  content: '';
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #D0D0D0;
+  transform: scaleX(1);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+.text_highlight a:hover::after {
+  transform: scaleX(0);
+  transform-origin: bottom left;
+}
+
+@media (max-width: 768px) {
+  .menu-popup {
+    padding: 15px;
+  }
+
+  .menu-footer p {
+    font-size: 14px;
+  }
+
+  .tennis_country_logo {
+    height: 30px; /* Adjust logo size for smaller screens */
+  }
+}

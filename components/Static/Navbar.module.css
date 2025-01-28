@@ -1,0 +1,212 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #121212;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .logo a {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+  }
+  
+  .menu ul {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu li a {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition-duration: 0.5s;
+  }
+  
+  .menu li a:hover {
+    color: #aedb2b;
+    transition-duration: 0.3s;
+  }
+  
+  /* Programs Dropdown Styles */
+  .dropdown {
+    position: relative;
+  }
+
+  .programsHover{
+    color: white;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    text-transform: capitalize;
+    display: block;
+    padding: 12px;
+    transition-duration: 0.3s;
+    font-weight: 600;
+
+  }
+ 
+  .programsHover:hover{
+    color: #aedb2b;
+
+  }
+  
+
+  .search-icon{
+    margin-top: 10px;
+    margin-right: 10px ;
+  }
+
+  .dropdown span {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 25px 0px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+  }
+  
+  .dropdown span:hover {
+    color: #aedb2b;
+  }
+  
+  .subMenu, .subsubMenu {
+    display: none;
+    position: absolute;
+    background-color: #121212;
+    width: 200px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    z-index: 1;
+    top: 40%;
+    left: 198px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  /* Sub Menu (Programs dropdown) */
+  .subMenu {
+    top: 190%;
+    left: 0;
+  }
+  
+  .subMenu ul {
+    list-style-type: none;
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .subMenu li a {
+    color: white;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    text-transform: capitalize;
+    display: block;
+    padding: 12px;
+    transition-duration: 0.3s;
+  }
+  
+  .subMenu li a:hover {
+    color: #aedb2b;
+  }
+  
+  /* Hover Effect for Dropdown */
+  .dropdown:hover .subMenu,
+  .subMenu:hover {
+    display: block;
+  }
+  
+  /* Ensuring sub-submenus work when hovering over the "Programs" dropdown */
+  .programsHover:hover .subsubMenu,
+  .subsubMenu:hover {
+    display: block;
+  }
+  
+  /* Sub Dropdown for Coaching Programs */
+  .subDropdown {
+    position: relative;
+  }
+  
+  /* Sub Sub Menu (Coaching Programs) */
+  .subSubMenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: black;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 4px;
+   
+  }
+  
+  .subSubMenu li a {
+    padding: 8px;
+  }
+  
+  .subSubMenu li a:hover {
+    background-color: #aedb2b;
+  }
+  
+  /* Ensure that the Sub Dropdowns only show on hovering over Programs or Coaching Programs */
+  .dropdown:hover .subDropdown .subSubMenu {
+    display: block;
+  }
+  
+  /* Join Now Button */
+  .joinButton a {
+    background-color: #427cf0;
+    color: white;
+    padding: 12px 40px;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    transition: background-color 0.3s;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  
+  .joinButton a:hover {
+    background-color: #235dd2;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      text-align: center;
+    }
+  
+    .menu ul {
+      flex-direction: column;
+      gap: 10px;
+      width: 100%; /* Ensures menu spans full width */
+    }
+  
+    .menu li {
+      width: 100%; /* Makes each menu item span the width of the screen */
+    }
+  
+    /* Make sure submenus still appear on hover for mobile */
+    .dropdown:hover .subMenu,
+    .subMenu:hover {
+      display: block;
+    }
+  
+    .joinButton {
+      margin-top: 10px;
+    }
+  }
+  

@@ -1,42 +1,32 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "@fontsource/montserrat/400.css"; /* Regular */
+@import "@fontsource/montserrat/500.css"; /* Regular */
+@import "@fontsource/montserrat/600.css"; /* Regular */
+@import "@fontsource/montserrat/700.css"; /* Bold */
+
+@import "@fontsource/dm-sans/400.css"; /* Regular */
+@import "@fontsource/dm-sans/500.css"; /* Medium */
+@import "@fontsource/dm-sans/600.css"; /* Medium */
+@import "@fontsource/dm-sans/700.css"; /* Bold */
+
+@import "@fontsource/open-sans/400.css";
+@import "@fontsource/open-sans/500.css";
+@import "@fontsource/open-sans/600.css";
+@import "@fontsource/open-sans/700.css";
+
+@import "@fontsource/barlow-condensed/400.css";
+@import "@fontsource/barlow-condensed/500.css";
+@import "@fontsource/barlow-condensed/600.css";
+@import "@fontsource/barlow-condensed/700.css";
+
+@import "~boxicons/css/boxicons.min.css";
+
+@import "primereact/resources/themes/lara-light-cyan/theme.css";
+
+.p-dialog .p-dialog-content {
+  padding: 0px !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.p-dialog .p-dialog-header{
+    display: none;
 }

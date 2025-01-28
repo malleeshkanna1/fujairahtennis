@@ -1,0 +1,62 @@
+.pricing-container{
+    margin-top: 100px;
+}
+
+.sml-heading {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 47px;
+  line-height: 47px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.sml-heading::before {
+  content: "";
+  position: absolute;
+  bottom: -15px; /* Adjust based on spacing */
+  left: 102px;
+  transform: translateX(-50%);
+  width: 200px; /* Length of the underline */
+  height: 5px; /* Thickness of the underline */
+  background: #dae912; /* Pink to Blue gradient */
+}
+
+
+/* Table Styles */
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse; /* Remove spacing between table cells */
+    margin-top: 1.5rem;
+  }
+  
+  .pricing-table th,
+  .pricing-table td {
+    padding: 15px; /* Increased padding for all columns */
+    text-align: left;
+  font-family: "Montserrat", sans-serif;
+
+  }
+  
+  .pricing-table th {
+    background-color: #4a4893; /* Header background color */
+    color: #ffffff; /* Header text color */
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .pricing-table tr:nth-child(even) {
+    background-color: #eeeeee; /* Striped row background color */
+  }
+  
+  .pricing-table tr:nth-child(odd) {
+    background-color: #ffffff; /* Default row background color */
+  }
+  
+  .pricing-table tr:hover {
+    background-color: #e0e0e0; /* Row hover effect */
+    transition: background-color 0.3s ease;
+  }
+  

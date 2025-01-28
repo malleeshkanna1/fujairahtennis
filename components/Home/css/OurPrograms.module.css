@@ -1,0 +1,139 @@
+/* Small Text (Subtitle) */
+.smallText {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  font-family: "DM Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  text-align: center;
+  color: #333;
+  opacity: 1;
+}
+
+/* Intro Heading */
+.intro-heading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 57px;
+  font-weight: 700;
+  line-height: 57px;
+  text-transform: uppercase;
+  letter-spacing: -0.6px;
+  margin-bottom: 0.46em;
+  color: #0f0f0f;
+  text-align: center;
+}
+
+/* Image Container */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 70vh; /* Adjust the height as needed */
+  overflow: hidden;
+}
+
+/* Image Style */
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s ease;
+}
+
+/* Hover Effect for Image (Zoom-in) */
+.image-container:hover .image {
+  transform: scale(1.05);
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.4;
+  transition: background 0.4s ease, opacity 0.4s ease;
+  z-index: 1;
+}
+
+.image-container:hover .overlay {
+  background: linear-gradient(to top, black, #afd639);
+  opacity: 0.8;
+}
+
+/* Text Container */
+.text-container {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  z-index: 2;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  font-family: "Montserrat", sans-serif;
+}
+
+.image-container:hover .text-container {
+  transform: translateY(-20%);
+}
+
+/* Program Name */
+.text-container div:first-child {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Read More Text */
+.read-more {
+  font-size: 1rem;
+  margin-top: 5px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  color: #e2e2e2;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.image-container:hover .read-more {
+  opacity: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .intro-heading {
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 1em;
+  }
+
+  .image-container {
+    height: 50vh;
+  }
+
+  .text-container div:first-child {
+    font-size: 1.25rem;
+  }
+
+  .read-more {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-heading {
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  .smallText {
+    font-size: 12px;
+    letter-spacing: 1.2px;
+  }
+
+  .image-container {
+    height: 40vh;
+  }
+}
