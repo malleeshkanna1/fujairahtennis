@@ -1,0 +1,116 @@
+/* Small Text (Subtitle) */
+.smallText {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  font-family: "DM Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  color: #333;
+  opacity: 1;
+}
+
+.testimonialContainer {
+  margin-top: 100px;
+}
+
+/* Intro Heading */
+.intro-heading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 57px;
+  font-weight: 700;
+  line-height: 57px;
+  text-transform: uppercase;
+  letter-spacing: -0.6px;
+  margin-bottom: 0.46em;
+  color: #0f0f0f;
+}
+
+.slideButton {
+  width: 3em;
+  height: 3em;
+  line-height: 2.85em;
+  background-color: transparent !important;
+  border: 1px solid #e6e4e0;
+  height: 56px;
+  width: 56px;
+  line-height: 55px;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  background-color: transparent !important;
+  text-align: center;
+}
+
+.testimonialText {
+  font-size: 20px;
+  color: #0f0f0f;
+  line-height: 36px;
+  font-weight: 400;
+  text-align: justify;
+  font-family: "Open Sans", sans-serif;
+}
+
+.profileImage {
+  border-radius: 50%;
+}
+
+.DisabledprofileImage {
+  border-radius: 50%;
+  opacity: 0.5;
+  transition-duration: 0.5s;
+}
+
+.DisabledprofileImage:hover {
+  opacity: 1;
+  transition-duration: 0.5s;
+}
+
+.DisabledprofileText {
+  margin-top: 20px;
+  opacity: 0;
+}
+
+.profileText h4 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.profileText p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #a1a1a1;
+}
+
+@media (max-width: 768px) {
+  .intro-heading {
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  .smallText {
+    font-size: 12px;
+    letter-spacing: 1.2px;
+  }
+
+  .image-container {
+    height: 40vh;
+  }
+
+  .profileImage,
+  .DisabledprofileImage {
+    width: auto;
+    height: 90px;
+  }
+
+  .testimonialText {
+    line-height: 30px;
+    font-size: 16px;
+  }
+}

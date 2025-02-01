@@ -1,0 +1,96 @@
+.intro-heading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 57px;
+  font-weight: 700;
+  line-height: 57px;
+  text-transform: uppercase;
+  letter-spacing: -0.6px;
+  margin-bottom: 0.46em;
+  color: #0f0f0f;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+.intro-heading::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  width: 80%;
+  height: 3px;
+  background-color: #afd639;
+  transform: translateX(-50%);
+}
+
+.programme-heading{
+  font-size: 35px;
+  font-weight: 500;
+  color: #0f0f0f;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
+
+.programme-content{
+  font-family: "DM Sans", sans-serif;
+  color: #656565;
+  font-weight: 400;
+  line-height: 36px;
+  font-size: 18px;
+}
+
+.bordered-content h3 {
+  font-size: 28px;
+  font-weight: 500;
+  color: #0f0f0f;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  position: relative; /* Added to ensure ::before is positioned relative to h3 */
+  text-align: center; /* Optional: Ensures the heading and underline are centered */
+  display: inline-block; /* Ensures the underline only spans the text width */
+}
+
+.bordered-content h3::before {
+  content: "";
+  position: absolute;
+  bottom: -20px; /* Adjusted spacing for better visibility */
+  left: 50%;
+  width: 30%; /* Adjusted to avoid overly wide lines */
+  height: 3px;
+  background-color: #afd639;
+  transform: translateX(-50%);
+}
+
+.bordered-content{
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+@media (max-width: 991px) {
+  .intro-heading {
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 1em;
+  }
+
+  .intro-heading::before {
+    width: 70%;
+    height: 4px;
+    bottom: -8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-heading {
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  .intro-heading::before {
+    width: 60%;
+    height: 3px;
+    bottom: -6px;
+  }
+}
+

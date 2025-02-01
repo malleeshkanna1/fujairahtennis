@@ -1,0 +1,120 @@
+.content-bg {
+  background-color: #f9f9f6;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.intro-heading {
+  font-family: Montserrat, sans-serif;
+  font-size: 57px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 57px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: -0.6px;
+  margin-bottom: 0.46em;
+  color: #0f0f0f;
+}
+
+.spacer{
+  padding: 30px;
+}
+
+.smallText {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 700;
+    font-family: "DM Sans", sans-serif;
+  
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    opacity: 1;
+  }
+
+
+  .image-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .image-container img {
+    width: 100%; /* Adjust width if needed */
+    height: auto;
+  }
+
+  .content {
+    position: absolute;
+    color: white; /* Adjust text color */
+    background-color: #AFD639; /* Optional: for better visibility */
+    padding: 10px;
+    width: 35vh;
+    padding: 20px;
+  }
+
+  .content2 {
+    position: absolute;
+    font-size: 18px; /* Adjust text size */
+    font-weight: bold;
+    color: white; /* Adjust text color */
+    background-color: #000000; /* Optional: for better visibility */
+    padding: 10px;
+    width: 35vh;
+    padding: 20px;
+  }
+
+  .left {
+    bottom: 20px;
+    left: -130px;
+  }
+
+  .right {
+    bottom: 20px;
+    right: 120px;
+  }
+
+  .size1{
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+    display: block;
+  }
+  .size2{
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 65px;
+    font-weight: 600;
+    display: block;
+  }
+  .size3{
+    font-family: "Open Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    display: block;
+  }
+
+@media (max-width: 991px) {
+  .intro-heading {
+    font-size: 38px;
+    line-height: 45px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .left {
+    bottom: 0px;
+    left: 0px;
+  }
+
+  .right {
+    bottom: 0px;
+    right: 0px;
+  }
+  .content {
+    width: 45%;
+  }
+
+  .content2 {
+    width: 50%;
+
+  }
+}

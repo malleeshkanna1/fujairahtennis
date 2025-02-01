@@ -1,0 +1,199 @@
+.footer-container {
+  background-color: black;
+  padding: 20px;
+}
+
+.company-name {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+}
+
+.company-logo {
+  width: auto;
+  height: 40px;
+}
+
+.headings {
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.menus {
+  color: #d0d0d0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #d0d0d0;
+  padding: 8px;
+  width: 100%;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.input-container i {
+  font-size: 18px;
+  margin-right: 8px;
+  color: #d0d0d0;
+  transition: color 0.3s ease-in-out;
+}
+
+.label-color {
+  color: #656565;
+}
+
+.input-container input,
+.input-container textarea {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+  background: transparent;
+}
+
+.input-container textarea {
+  resize: none;
+  height: 10vh;
+}
+
+.input-container:hover {
+  border-color: #555;
+}
+/* Focus effect */
+.input-container:focus-within {
+  border-color: #555;
+}
+
+.input-container:focus-within i {
+  color: #555;
+}
+
+.input-container input::placeholder,
+.input-container textarea::placeholder {
+  color: #d0d0d0; /* Light grey */
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #f8f8f8;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.custom-checkbox input {
+  display: none;
+}
+
+.custom-checkbox .checkmark {
+  width: 20px;
+  height: 22px;
+  border: 2px solid #afd639;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+  margin-right: 8px;
+}
+
+.custom-checkbox input:checked + .checkmark::after {
+  content: "●"; /* Unicode dot character */
+  font-size: 20px;
+  color: #f8f8f8;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -58%);
+}
+
+.submit-btn {
+  outline: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 21px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  background-color: #afd639;
+  padding: 17px 50px;
+  color: white;
+  margin-top: 8px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.termsandcond {
+  color: #d0d0d0;
+  margin-top: 3px;
+}
+
+.menu-heading {
+  color: #ffffff;
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+}
+
+.list-style-none{
+  list-style: none;
+}
+
+.footer-links {
+  padding: 0;
+}
+
+.footer-links li {
+  color: #d0d0d0;
+  font-size: 17px;
+  line-height: 28px;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 15px;
+  transition: transform 0.5s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.footer-links li:hover {
+  transform: translateX(10px);
+}
+
+.footer-links li::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px; /* Adjusted position */
+  width: 0;
+  height: 2px;
+  background: #d0d0d0; /* Pink-Blue Gradient */
+  transition: width 0.4s ease, left 0.4s ease;
+}
+
+.footer-links li:hover::before {
+  width: 50%;
+  left: 0;
+}
+
+.footer-links li a {
+  text-decoration: none;
+  color: #d0d0d0;
+  display: inline-block; /* Ensure it aligns with hover effect */
+}
+
+.footer-links li a:hover {
+  color: #ffffff;
+}

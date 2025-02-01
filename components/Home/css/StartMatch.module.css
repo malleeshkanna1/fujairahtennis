@@ -1,0 +1,70 @@
+.start-match-container {
+    padding: 80px; /* Use viewport width for padding */
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 0px;
+    justify-content: center;
+    gap: 20px; /* Adjust spacing between elements */
+    flex-wrap: wrap; /* Ensure it wraps properly on smaller screens */
+  }
+  
+  .start-match-container h2 {
+    font-size: 10vw; /* Adjust font size dynamically with the viewport width */
+    line-height: 1; /* Set line height to prevent excessive spacing */
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .ball-image {
+    width: 10vw; /* Adjust ball size to a percentage of the viewport width */
+    height: 10vw; /* Maintain aspect ratio for ball */
+    transition: transform 0.1s ease;
+    position: absolute;
+    right:5vw; /* Use viewport units to position the ball */
+    top: 5vw;
+  }
+  
+  .own-text {
+    left: 5vw; /* Adjust left position with viewport width */
+    position: relative;
+  }
+  
+  @media (max-width: 1200px) {
+    .start-match-container h2 {
+      font-size: 8vw;
+      line-height: 1.1;
+    }
+    .ball-image {
+      right: 5vw;
+      top: 8vw;
+      width: 12vw;
+    height: 12vw;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .start-match-container h2 {
+      font-size: 8vw;
+    }
+    .ball-image {
+        right: 4vw;
+        top: 8vw;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .start-match-container h2 {
+      font-size: 9vw; /* Even larger font size for small screens */
+      line-height: 7vw;
+
+    }
+    .ball-image {
+        right: 13vw;
+        top: 19vw;
+    }
+  }
+  

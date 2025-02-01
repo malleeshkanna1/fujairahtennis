@@ -1,0 +1,29 @@
+.logo-hover {
+  opacity: 0.2;
+  transition-duration: 0.5s;
+}
+
+.logo-hover:hover {
+  opacity: 1;
+  transition-duration: 0.5s;
+}
+
+.aboutclients {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: rgb(15, 15, 15);
+  text-transform: uppercase;
+}
+
+@media (max-width: 991px) {
+  .aboutclients {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .aboutclients {
+    font-size: 17px;
+  }
+}

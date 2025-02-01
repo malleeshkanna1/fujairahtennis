@@ -1,0 +1,99 @@
+.coach-card {
+  background-color: #f5f5f5;
+  padding: 10px;
+}
+
+.intro-heading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 57px;
+  font-weight: 700;
+  line-height: 57px;
+  text-transform: uppercase;
+  letter-spacing: -0.6px;
+  margin-bottom: 0.46em;
+  color: #0f0f0f;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+.intro-heading::before {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  width: 60%;
+  height: 3px;
+  background-color: #afd639;
+  transform: translateX(-50%);
+}
+
+.coach-details h4 {
+  font-family: "Montserrat", sans-serif;
+  color: #0f0f0f;
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.coach-details label{
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  color: #656565;
+  display: block;
+  font-size: 18px;
+}
+
+.coach-details span{
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  color: #656565;
+  display: block;
+  font-size: 18px;
+}
+
+.learn-btn{
+    outline: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 21px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    background-color: #AFD639;
+    padding: 17px 50px;
+    color: white;
+  }
+
+  .spacing{
+    margin-bottom: 7rem;
+  }
+
+@media (max-width: 991px) {
+  .intro-heading {
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 1em;
+  }
+
+  .intro-heading::before {
+    width: 70%;
+    height: 4px;
+    bottom: -8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-heading {
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  .intro-heading::before {
+    width: 60%;
+    height: 3px;
+    bottom: -6px;
+  }
+}

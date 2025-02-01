@@ -1,0 +1,139 @@
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    object-position: top;
+  }
+  
+  .content {
+    position: absolute;
+    bottom: -2%;
+    right: -5%;
+    color: #ffffff;
+    text-align: left;
+    width: 53%;
+    padding: 30px;
+    background-color: rgba(0, 0, 0);
+    background-image: url(/images/common/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .content h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.944em;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 2.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: -0.35px;
+    margin-top: 1.06em;
+    margin-bottom: 0.68em;
+  }
+  
+  .smallText {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 700;
+    font-family: "DM Sans", sans-serif;
+  
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    opacity: 1;
+  }
+  
+  .intro-container {
+    width: 70%;
+    margin-left: 80px;
+  }
+  
+  .intro-heading {
+    font-family: Montserrat, sans-serif;
+    font-size: 57px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 57px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: -0.6px;
+    margin-bottom: 0.46em;
+    color: #0f0f0f;
+  }
+  
+  .intro-passage {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 29px;
+    color: #656565;
+    text-align: justify;
+    margin: 0;
+  }
+  
+  .learn-btn{
+    outline: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 21px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    background-color: #AFD639;
+    padding: 17px 50px;
+    color: white;
+  }
+  
+  @media (max-width: 991px) {
+    /* Large screen breakpoint */
+    .intro-container {
+      width: 100%;
+      margin-left: 0px;
+    }
+  
+    .intro-heading {
+      font-size: 38px;
+      line-height: 45px;
+    }
+  }
+  
+  @media only screen and (max-width: 1200px) {
+    .content {
+      width: 70%;
+      right: 0%;
+      bottom: 0%;
+      padding: 10px;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .content {
+      width: 80%;
+      right: 0%;
+      bottom: 0%;
+      padding: 8px;
+    }
+  }
+  
+  @media only screen and (max-width: 576px) {
+    .content {
+      width: 90%;
+      right: 0%;
+      bottom: 0%;
+      padding: 10px;
+    }
+  
+    .content h3 {
+      font-size: 1.5em;
+    }
+  }
+  

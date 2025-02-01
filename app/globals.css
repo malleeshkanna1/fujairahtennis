@@ -18,7 +18,7 @@
 @import "@fontsource/barlow-condensed/500.css";
 @import "@fontsource/barlow-condensed/600.css";
 @import "@fontsource/barlow-condensed/700.css";
-
+@import 'animate.css';
 @import "~boxicons/css/boxicons.min.css";
 
 @import "primereact/resources/themes/lara-light-cyan/theme.css";
@@ -29,4 +29,27 @@
 
 .p-dialog .p-dialog-header{
     display: none;
+}
+
+.p-accordion-header-link {
+  background: transparent;
+  border: none;
+  text-decoration: none;
+}
+.p-accordion-header-text{
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+svg.p-icon.p-accordion-toggle-icon {
+  color: black;
+}
+
+.p-accordion-content{
+  background: transparent;
+
 }

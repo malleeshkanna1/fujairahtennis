@@ -1,0 +1,37 @@
+/* Table Styles */
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse; /* Remove spacing between table cells */
+    margin-top: 1.5rem;
+  }
+  
+  .pricing-table th,
+  .pricing-table td {
+    padding: 15px; /* Increased padding for all columns */
+    text-align: left;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    border: 2px solid #ffffff; /* White border for all cells */
+  }
+  
+  .pricing-table th {
+    background-color: #4a4893; /* Header background color */
+    color: #ffffff; /* Header text color */
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .pricing-table tr:nth-child(even) {
+    background-color: #eeeeee; /* Striped row background color */
+  }
+  
+  .pricing-table tr:nth-child(odd) {
+    background-color: #F6F5F9; /* Default row background color */
+  }
+  
+  .pricing-table tr:hover {
+    background-color: #e0e0e0; /* Row hover effect */
+    transition: background-color 0.3s ease;
+  }
+  
