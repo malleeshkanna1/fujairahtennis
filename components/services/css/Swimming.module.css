@@ -1,0 +1,21 @@
+.pricing-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "DM Sans", sans-serif;
+  background-color: white;
+}
+.pricing-table th,.pricing-table
+td {
+  border: 1px solid #222222;
+  padding: 15px;
+  text-align: left;
+  font-size: 14px;
+}
+.pricing-table th {
+  background-color: #f3f3f8;
+  font-weight: bold;
+}
+.pricing-table tr:nth-child(odd) {
+    background-color: #f3f3f8;
+
+}

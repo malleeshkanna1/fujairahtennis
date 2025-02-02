@@ -26,8 +26,8 @@ const Footer = () => {
 
                   <p className={FooterStyles["headings"]}>Address</p>
                   <div className={FooterStyles["menus"]}>
-                    <i className="bx bx-map"></i> Tennis & Country Club Fujairah,
-                    Fujairah, United Arab Emirates
+                    <i className="bx bx-map"></i> Tennis & Country Club
+                    Fujairah, Fujairah, United Arab Emirates
                   </div>
                   <div className="mt-4">
                     <p className={FooterStyles["headings"]}>Newsletter</p>
@@ -59,17 +59,29 @@ const Footer = () => {
               </div>
               <div className="col-md-6 mt-4 d-block d-md-flex justify-content-center">
                 <div>
-                <p className={FooterStyles["menu-heading"]}>QUICK LINKS</p>
-                <div className="mt-4">
-                  <ul className={FooterStyles["footer-links"]}>
-                    <li>Home</li>
-                    <li><Link href='/about-us'>About Us</Link></li>
-                    <li>Coaches</li>
-                    <li>Facilities</li>
-                    <li>Events</li>
-                    <li>Contact Us</li>
-                  </ul>
-                </div>
+                  <p className={FooterStyles["menu-heading"]}>QUICK LINKS</p>
+                  <div className="mt-4">
+                    <ul className={FooterStyles["footer-links"]}>
+                      <li>
+                        <Link href="/">Home</Link>
+                      </li>
+                      <li>
+                        <Link href="/about-us">About Us</Link>
+                      </li>
+                      <li>
+                        <Link href="/coaches">Coaches</Link>
+                      </li>
+                      <li>
+                        <Link href="/facilities">Facilities</Link>
+                      </li>
+                      <li>
+                        <Link href="/">Events</Link>
+                      </li>
+                      <li>
+                        <Link href="/">Contact Us</Link>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -80,17 +92,55 @@ const Footer = () => {
                 <p className={FooterStyles["menu-heading"]}>OUR PROGRAMS</p>
                 <div className="mt-4">
                   <ul className={FooterStyles["footer-links"]}>
-                    <li>Tennis Coaching</li>
-                    <li>Swimming Coaching</li>
-                    <li>Paddle Coaching</li>
-                    <li>Gym Training</li>
-                    <li>Summer Camp</li>
-                    <li>Restaurant</li>
-                    <li>Gymnastic Class</li>
-                    <li>Kickboxing Class</li>
-                    <li>Personal Training</li>
-                    <li>Ballet Classes</li>
-                    <li>Squash Classes</li>
+                    <li>
+                      <Link href="/services/tennis-coaching">
+                        Tennis Coaching
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/swimming-coaching">
+                        Swimming Coaching
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/paddle-coaching">
+                        Paddle Coaching
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/gym-training">Gym Training</Link>
+                    </li>
+                    <li>
+                      <Link href="/services/summer-camp">Summer Camp</Link>
+                    </li>
+                    <li>
+                      <Link href="/services/restaurant">Restaurant</Link>
+                    </li>
+                    <li>
+                      <Link href="/services/gymnastic-class">
+                        Gymnastic Class
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/kickboxing-class">
+                        Kickboxing Class
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/personal-training">
+                        Personal Training
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/ballet-classes">
+                        Ballet Classes
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/squash-lessons">
+                        Squash Lessons
+                      </Link>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -98,22 +148,36 @@ const Footer = () => {
                 <p className={FooterStyles["menu-heading"]}>SOCIAL</p>
                 <div className="mt-4">
                   <ul className={FooterStyles["footer-links"]}>
-                    <li className={FooterStyles["list-style-none"]}><i className='bx bxl-facebook' ></i> Facebook</li>
-                    <li className={FooterStyles["list-style-none"]}><i className='bx bxl-tiktok' ></i> Tiktok</li>
-                    <li className={FooterStyles["list-style-none"]}><i className='bx bxl-instagram' ></i> Instagram</li>
+                    <li className={FooterStyles["list-style-none"]}>
+                      <i className="bx bxl-facebook"></i> <a target="_blank" href="https://www.facebook.com/TennisCountryClubFujairah">Facebook</a> 
+                    </li>
+                    <li className={FooterStyles["list-style-none"]}>
+                      <i className="bx bxl-tiktok"></i> <a target="_blank" href="/">Tiktok</a> 
+                    </li>
+                    <li className={FooterStyles["list-style-none"]}>
+                      <i className="bx bxl-instagram"></i> <a target="_blank" href="https://www.instagram.com/tccfjr/?hl=en">Instagram</a> 
+                    </li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
           <div className="col-md-6 col-lg-4 mt-4">
-          <p className={FooterStyles["menu-heading"]}>SAY HELLO</p>
-                <div className="mt-4">
-                  <ul className={FooterStyles["footer-links"]}>
-                    <li className={FooterStyles["list-style-none"]}><i className='bx bx-envelope' ></i> <a href="mailto:info@fujairahtennisclub.ae">info@fujairahtennisclub.ae</a></li>
-                    <li className={FooterStyles["list-style-none"]}><i className='bx bx-phone' ></i> <a href="tel:+97192244880">+97192244880</a></li>
-                  </ul>
-                </div>
+            <p className={FooterStyles["menu-heading"]}>SAY HELLO</p>
+            <div className="mt-4">
+              <ul className={FooterStyles["footer-links"]}>
+                <li className={FooterStyles["list-style-none"]}>
+                  <i className="bx bx-envelope"></i>{" "}
+                  <a href="mailto:info@fujairahtennisclub.ae">
+                    info@fujairahtennisclub.ae
+                  </a>
+                </li>
+                <li className={FooterStyles["list-style-none"]}>
+                  <i className="bx bx-phone"></i>{" "}
+                  <a href="tel:+97192244880">+97192244880</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

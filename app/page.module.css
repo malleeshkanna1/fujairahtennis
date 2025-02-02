@@ -1,0 +1,51 @@
+.master-container {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.container h1 {
+  font-size: 270px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+
+  color: #0f0f0f;
+}
+
+.container h3 {
+  font-size: 47px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  color: #0f0f0f;
+}
+
+.container p {
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.home-btn {
+  outline: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 21px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  background-color: #afd639;
+  padding: 17px 50px;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+@media (max-width: 768px) {
+    .container h1 {
+    font-size: 150px;
+  }
+}

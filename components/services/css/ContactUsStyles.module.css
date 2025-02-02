@@ -1,0 +1,114 @@
+.contact-container {
+  background-color: white;
+  padding: 30px;
+  position: sticky;
+  top: 20vh;
+}
+
+.contact-container h3 {
+  font-size: 21px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 8px;
+  width: 100%;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.input-container i {
+  font-size: 18px;
+  margin-right: 8px;
+  color: #888;
+  transition: color 0.3s ease-in-out;
+}
+
+.label-color {
+  color: #656565;
+}
+
+.input-container input,
+.input-container textarea {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+  background: transparent;
+}
+
+.input-container textarea {
+  resize: none;
+  height: 10vh;
+}
+
+.input-container:hover {
+  border-color: #555;
+}
+/* Focus effect */
+.input-container:focus-within {
+  border-color: #555;
+}
+
+.input-container:focus-within i {
+  color: #555;
+}
+
+.input-container input::placeholder,
+.input-container textarea::placeholder {
+  color: #4e4e4e; /* Light grey */
+  font-size: 16px;
+}
+
+.submit-btn {
+  outline: none;
+  border: none;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 21px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  background-color: #afd639;
+  padding: 9px 23px;
+  color: white;
+  margin-top: 8px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+}
+
+.custom-checkbox input {
+  display: none;
+}
+
+.custom-checkbox .checkmark {
+  width: 19px;
+  height: 19px;
+  border: 1px solid #bebebe;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+  margin-right: 8px;
+}
+
+.custom-checkbox input:checked + .checkmark::after {
+  content: "●"; /* Unicode dot character */
+  font-size: 20px;
+  color: #333;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -58%);
+}
