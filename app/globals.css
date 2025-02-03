@@ -31,12 +31,12 @@
     display: none;
 }
 
-.p-accordion-header-link {
+.we-proud-accordion .p-accordion-header-link {
   background: transparent;
   border: none;
   text-decoration: none;
 }
-.p-accordion-header-text{
+.we-proud-accordion .p-accordion-header-text{
   color: black;
   text-decoration: none;
   text-transform: uppercase;
@@ -45,11 +45,49 @@
   font-weight: 600;
 }
 
-svg.p-icon.p-accordion-toggle-icon {
+.we-proud-accordion svg.p-icon.p-accordion-toggle-icon {
   color: black;
 }
 
-.p-accordion-content{
+.we-proud-accordion .p-accordion-content{
   background: transparent;
+}
 
+.p-sidebar-icons{
+  display: none;
+}
+
+.sm-screen-drop .p-accordion-header-link {
+  padding: 0px;
+}
+
+
+.sm-screen-drop  svg.p-icon.p-accordion-toggle-icon{
+  display: none;
+}
+
+.sm-screen-drop .p-accordion .p-accordion-content{
+  border: none;
+}
+
+.sm-screen-drop .p-accordion-header-link {
+  background: transparent;
+  border: none;
+  text-decoration: none;
+}
+.sm-screen-drop .p-accordion-header-text{
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.sm-screen-drop svg.p-icon.p-accordion-toggle-icon {
+  color: black;
+}
+
+.sm-screen-drop .p-accordion-content{
+  background: transparent;
 }

@@ -115,10 +115,47 @@
   font-family: Montserrat, sans-serif  ;
 }
 
+.menu-list li a {
+  color: #D0D0D0;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+
+}
+
+
+.menu-list li a svg{
+  display: none;
+}
+
 .menu-list li:hover {
   color: #ffffff; /* Hover color */
   transition-duration: 0.5s;
+}
 
+.drop-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.drop-list li {
+  font-size: 19px;
+  margin-bottom: 19px;
+  color: #D0D0D0;
+  cursor: pointer;
+  transition: color 0.3s;
+  line-height: 1.5em;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-align: left;
+  transition-duration: 0.5s;
+  font-family: Montserrat, sans-serif  ;
+}
+
+.no-margin{
+  margin-bottom: 0px !important;
 }
 
 .menu-footer {

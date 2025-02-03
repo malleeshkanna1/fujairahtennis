@@ -15,7 +15,7 @@ const WeAreProud = () => {
             <h1 className={WeAreProudStyles["intro-heading"]}>
               We're proud to be the best at training
             </h1>
-            <div className="mt-3">
+            <div className="mt-3 we-proud-accordion">
               <Accordion activeIndex={0}>
                 <AccordionTab header="I am looking for a hitting partner. How can I be connected?">
                   <p className="m-0">
