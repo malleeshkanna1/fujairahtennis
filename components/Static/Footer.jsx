@@ -44,9 +44,9 @@ const Footer = () => {
                       <input type="checkbox" />
                       <span className={FooterStyles["checkmark"]}></span>
                     </label>
-                    <span className={FooterStyles["termsandcond"]}>
-                      I agree to the <u>Privacy Policy</u>.
-                    </span>
+                    <small className={FooterStyles["termsandcond"]}>
+                      I agree to the <Link className="text-white" href="/privacy-policy">Privacy Policy</Link>.
+                    </small>
 
                     <button
                       type="submit"

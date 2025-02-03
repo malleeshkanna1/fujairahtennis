@@ -1,5 +1,6 @@
 import React from "react";
 import CoachesStyles from "./css/Coaches.module.css";
+import Image from "next/image";
 
 const Coaches = () => {
   const CoachesData = [
@@ -140,23 +141,26 @@ const Coaches = () => {
                       }}
                     />
                   </div>
-                  {data.professional_exp && 
-                  <div>
-                  <p>Professional Experience</p>
-                    {data.professional_exp.map((point,i)=>
-                      <div key={i}>{point}</div>
-                    )}
-                  </div>
-                  }
+                  {data.professional_exp && (
+                    <div>
+                      <p>Professional Experience</p>
+                      {data.professional_exp.map((point, i) => (
+                        <div key={i}>{point}</div>
+                      ))}
+                    </div>
+                  )}
                 </div>
                 <div
                   className={`col-md-6 mt-4 ${
                     i % 2 === 0 ? "order-md-1" : "order-md-2"
                   } order-1`}
                 >
-                  <img
+                  <Image
+                    layout="responsive"
+                    width={16}
+                    height={9}
+                    alt={data.name}
                     src={`/images/coaches/${data.image}`}
-                    alt=""
                     className="img-fluid"
                   />
                 </div>

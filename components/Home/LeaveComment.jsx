@@ -4,6 +4,7 @@ import React from "react";
 import LeaveCommentStyles from "./css/LeaveComment.module.css";
 import { Formik, Form, ErrorMessage, Field } from "formik";
 import * as yup from "yup";
+import Link from "next/link";
 
 const LeaveComment = () => {
   const initialValues = {
@@ -106,7 +107,7 @@ const LeaveComment = () => {
                             <span
                               className={LeaveCommentStyles["checkmark"]}
                             ></span>
-                           <small> I agree that my data is <u>collected and stored</u>.</small>
+                           <small> I agree that my data is <Link href='/privacy-policy' className="text-black" >collected and stored</Link>.</small>
                           </label>
                         </div>
                         </div>
