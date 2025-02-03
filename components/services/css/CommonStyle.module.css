@@ -64,3 +64,10 @@
   object-fit: cover;
   object-position: center;
 }
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 25px;
+    line-height: 30px;
+  }
+}

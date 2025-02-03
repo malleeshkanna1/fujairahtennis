@@ -1,0 +1,16 @@
+.policy-container{
+    padding: 30px;
+    background-color: white;
+}
+
+.bg-lightwhite{
+    background-color: #F6F5F9;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+@media (max-width: 768px) {
+    .bg-lightwhite {
+        padding: 50px 10px 10px 10px; 
+    }
+}

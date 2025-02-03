@@ -8,13 +8,13 @@ export const metadata = {
   openGraph: {
     title: "Contact Us - Get in Touch with Fujairah Tennis & Country Club",
     description: "Need more information? Contact Fujairah Tennis & Country Club for membership details, bookings, coaching inquiries, and general assistance.",
-    image: "https://fujairahtennisclub.com/images/images/logo.png", // Replace with an actual image related to contact or the club
+    image: "https://fujairahtennisclub.com/images/common/logo.png", // Replace with an actual image related to contact or the club
   },
   twitter: {
     card: "summary_large_image",
     title: "Contact - Fujairah Tennis & Country Club",
     description: "Have questions? Reach out to us for membership, coaching, or any other inquiries at Fujairah Tennis & Country Club.",
-    image: "https://fujairahtennisclub.com/images/images/logo.png", // Replace with actual image URL
+    image: "https://fujairahtennisclub.com/images/common/logo.png", // Replace with actual image URL
   },
   keywords: [
     "Contact Fujairah Tennis Club",

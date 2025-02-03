@@ -60,7 +60,11 @@ const Contact = () => {
               </div>
             </div>
             <div className="col-md-7">
-              <ContactForm />
+              <div className={ContactusStyles["contact-container"]}>
+                <div className="mt-4">
+                  <ContactForm type={1} />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -79,7 +83,11 @@ const Contact = () => {
         </div>
         <div className="d-flex justify-content-center align-items-center mt-4 ">
           <div className="d-flex gap-2">
-            <a href="https://www.facebook.com/TennisCountryClubFujairah" target="_blank" className={ContactusStyles["social-btn"]}>
+            <a
+              href="https://www.facebook.com/TennisCountryClubFujairah"
+              target="_blank"
+              className={ContactusStyles["social-btn"]}
+            >
               <i className="bx bxl-facebook-circle fs-3"></i>
             </a>
 
@@ -87,7 +95,11 @@ const Contact = () => {
               <i className="bx bxl-tiktok fs-3"></i>
             </a>
 
-            <a href="https://www.instagram.com/tccfjr/?hl=en" target="_blank" className={ContactusStyles["social-btn"]}>
+            <a
+              href="https://www.instagram.com/tccfjr/?hl=en"
+              target="_blank"
+              className={ContactusStyles["social-btn"]}
+            >
               <i className="bx bxl-instagram fs-3"></i>
             </a>
           </div>
