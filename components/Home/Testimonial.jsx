@@ -51,7 +51,7 @@ const Testimonial = () => {
 
   return (
     <div className={TestimonialStyles.testimonialContainer}>
-      <div className="mt-5 container">
+      <div className="mt-5 px-5 px-md-0 container">
         <div className="d-flex d-md-block justify-content-center">
           <div>
           <p className={TestimonialStyles.smallText}>About Us</p>
