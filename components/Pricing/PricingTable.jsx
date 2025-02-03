@@ -17,8 +17,8 @@ const PricingTable = ({ tableData }) => {
         <tbody>
           {tableData.data.map((row, i) => (
             <tr key={i}>
-              {row.map((data) => (
-                <td>{data}</td>
+              {row.map((data,i) => (
+                <td key={i}>{data}</td>
               ))}
             </tr>
           ))}

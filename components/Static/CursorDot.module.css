@@ -1,0 +1,16 @@
+.cursor-dot {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease-out;
+  }
+  
+  /* Ensure text inverts when hovered by the cursor dot */
+  .cursor-dot + * {
+    mix-blend-mode: difference;
+  }

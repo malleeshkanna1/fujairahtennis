@@ -4,6 +4,7 @@ import ContactUsStyles from "./Contactus.module.css";
 import { Formik, ErrorMessage, Field, Form } from "formik";
 import * as yup from "yup";
 import { toast } from "react-toastify";
+import Link from "next/link";
 
 const ContactForm = () => {
   const [TermsAndConditions, SetTermsandConditions] = useState(false);
@@ -107,9 +108,9 @@ const ContactForm = () => {
                     />
                   </div>
                   <div className="col-md-12 mt-md-4 mt-3">
-                    <div className={ContactUsStyles["input-container"]}>
-                      <i className="bx bx-pencil"></i>
-                      <Field type="text" name="message" placeholder="Message" />
+                    <div className={`align-items-start ${ContactUsStyles["input-container"]}`}>
+                      <i className="bx bx-pencil mt-2"></i>
+                      <Field as="textarea" name="message" placeholder="Message" />
                     </div>
                     <ErrorMessage
                       name="message"
@@ -132,7 +133,7 @@ const ContactForm = () => {
                     <span className={ContactUsStyles["checkmark"]}></span>
                     <small>
                       {" "}
-                      I agree to the <u> privacy policy</u>.
+                      I agree to the <Link href='/privacy-policy' className="text-black"> Privacy policy</Link>.
                     </small>
                   </label>
                 </div>

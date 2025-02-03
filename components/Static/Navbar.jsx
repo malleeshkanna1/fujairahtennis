@@ -141,7 +141,7 @@ const Navbar = () => {
         {/* Right side: Join Now Button */}
         <div className="d-none d-lg-block">
           <div className={styles.joinButton}>
-            <Link href="/join" className={styles.joinNow}>
+            <Link href="/contact" className={styles.joinNow}>
               Join Now
             </Link>
           </div>
