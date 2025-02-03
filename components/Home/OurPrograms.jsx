@@ -10,7 +10,7 @@ const OurPrograms = () => {
     {
       number: "03",
       name: "Paddle Tennis Coaching",
-      link: "paddle-tennis-coaching",
+      link: "paddle-coaching",
     },
     { number: "04", name: "Gym Training", link: "gym-training" },
     { number: "05", name: "Summer Camp", link: "summer-camp" },
@@ -29,7 +29,7 @@ const OurPrograms = () => {
       <div className="row">
         {ProgramsList.map((data, i) => (
           <div className="col-md-6 col-lg-4 mt-3" key={i}>
-            <Link href={`/${data.link}`}>
+            <Link href={`/services/${data.link}`}>
               <div className={ProgramsStyle["image-container"]}>
                 <Image
                   width={1920}
