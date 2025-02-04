@@ -1,0 +1,80 @@
+.eventStatus {
+  font-family: "DM Sans", sans-serif;
+}
+
+.Newsheading {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 57px;
+  color: #0f0f0f;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 57px;
+}
+
+.dateTime {
+  font-family: "DM Sans", sans-serif;
+  color: #656565;
+  font-size: 16px;
+}
+
+.passage {
+  font-family: "Open Sans", sans-serif;
+  color: #656565;
+  font-weight: 400;
+  line-height: 29px;
+}
+
+.greenColor{
+  color: #9ac42f;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.link{
+  font-family: Montserrat, sans-serif ;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f0f0f;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.calendar-button {
+  background-color: #afd639 !important;
+  border-color: #afd639 !important;
+  color: #000 !important;
+}
+.calendar-button:hover {
+  background-color: #9ac42f !important; /* Slightly darker shade on hover */
+  border-color: #9ac42f !important;
+}
+
+.subHeading{
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #0f0f0f;
+}
+
+.Contentlabel{
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 19px;
+  color: #0f0f0f;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.dataDmSans{
+  font-family: "DM Sans", sans-serif;
+  font-size: 17px;
+  color: #656565;
+  line-break: anywhere;
+}
+
+@media (max-width: 576px) {
+  .Newsheading {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 30px;
+  }
+}

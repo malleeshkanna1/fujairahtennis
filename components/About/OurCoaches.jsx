@@ -1,6 +1,7 @@
 import React from "react";
 import OurCoachesStyles from "./css/OurCoaches.module.css";
 import PlayVideoContainer from "../Home/PlayVideo";
+import Link from "next/link";
 
 const OurCoaches = () => {
   const ourCoachesData = [
@@ -65,9 +66,9 @@ const OurCoaches = () => {
                 </div>
                 <div className="d-flex justify-content-center">
                   <div className="mt-4">
-                    <button className={OurCoachesStyles["learn-btn"]}>
+                    <Link href='/coaches' className={OurCoachesStyles["learn-btn"]}>
                       VISIT PROFILE
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -76,9 +77,9 @@ const OurCoaches = () => {
         </div>
         <div className="d-flex justify-content-center mt-5">
           <div className="mt-4">
-            <button className={OurCoachesStyles["learn-btn"]}>
+            <Link href='/coaches' className={OurCoachesStyles["learn-btn"]}>
               VIEW ALL COACHES
-            </button>
+            </Link>
           </div>
         </div>
       </div>

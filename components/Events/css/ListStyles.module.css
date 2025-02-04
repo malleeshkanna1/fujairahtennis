@@ -1,0 +1,143 @@
+.event-list-container {
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px; /* Adjust as needed */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px; /* Adjust icon size */
+  color: gray;
+}
+
+.search-txtbox {
+  padding: 18px 18px 18px 42px; /* Adjust padding to avoid overlapping icon */
+  box-shadow: none !important;
+  width: 100%;
+  outline: none;
+  border: 1px solid rgb(214, 214, 214);
+  border-radius: 5px; /* Optional */
+}
+
+.search-txtbox:focus {
+  border: 1px solid rgb(214, 214, 214);
+}
+
+.heading {
+  font-size: 28px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.borderLg {
+  border-left: 3px solid #334aff;
+}
+
+.eventCard {
+  background-color: #fff;
+  max-width: 800px;
+  padding-left: 20px;
+}
+
+.eventDate {
+  text-align: center;
+  font-weight: 600;
+  margin-right: -25px;
+  font-size: 14px;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.eventDate div {
+  line-height: 1.2;
+}
+
+.iconColors {
+  color: #afd639;
+}
+
+.eventFeatured {
+  color: #334aff;
+  font-weight: bold;
+  font-family: "DM Sans", sans-serif;
+}
+
+.eventDateLG {
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  color: #141827;
+}
+
+.eventTitle {
+  font-size: 28px;
+  font-weight: 600;
+  color: black;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  line-height: 34px;
+}
+
+.location {
+  font-family: "Open Sans", sans-serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.eventDescription {
+  color: #6c757d;
+}
+
+.eventPrice {
+  font-weight: 600;
+  font-size: 20px;
+  color: #0f0f0f;
+  font-family: "DM Sans", sans-serif;
+}
+
+@media (max-width: 576px) {
+  .borderLg {
+    border-left: none;
+  }
+
+  .eventFeatured {
+    display: none;
+  }
+
+  .location{
+  font-size: 12px;
+
+  }
+
+  .eventDescription {
+    display: none;
+  }
+
+  .eventPrice {
+    font-size: 17px;
+    margin-top: 10px;
+  }
+
+  .eventTitle {
+    font-size: 1.2rem;
+    line-height: 23px;
+  }
+
+  .eventDate {
+    margin-right: -15px;
+    font-size: 11px;
+  }
+  .borderSm {
+    border-left: 3px solid #334aff;
+  }
+
+  .eventDateLG {
+    font-size: 11px;
+  }
+}

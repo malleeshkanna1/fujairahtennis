@@ -91,3 +91,18 @@
 .sm-screen-drop .p-accordion-content{
   background: transparent;
 }
+
+.p-tieredmenu-root-list{
+  padding: 0;
+}
+
+.p-menuitem-link{
+  text-decoration: none;
+}
+
+.p-button{
+  background-color: #AFD639 !important;
+  border-color: #AFD639 !important;
+  color: #ffffff !important;
+  font-weight: lighter !important;
+}

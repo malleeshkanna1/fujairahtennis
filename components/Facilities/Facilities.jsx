@@ -1,6 +1,7 @@
 import React from "react";
 import FacilitiesStyles from "./css/Facilities.module.css";
 import Followus from "./Followus";
+import Image from "next/image";
 
 const Facilities = () => {
   const allFacilitiesData = [
@@ -47,7 +48,10 @@ const Facilities = () => {
                     i % 2 === 0 ? "order-md-1" : "order-md-2"
                   } order-2`}
                 >
-                  <img
+                  <Image
+                   layout="responsive"
+                   width={16}
+                   height={9}
                     src={`/images/facilities/${data.link}.jpg`}
                     alt=""
                     className="img-fluid"

@@ -57,7 +57,7 @@ const Navbar = () => {
     },
     {
       title: "Events",
-      route: "/",
+      route: "/events",
       dropdown: false,
     },
   ];
