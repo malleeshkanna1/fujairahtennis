@@ -1,17 +1,22 @@
 "use client";
 
-import React from "react";
+import React,{useState} from "react";
 import LeaveCommentStyles from "./css/LeaveComment.module.css";
 import { Formik, Form, ErrorMessage, Field } from "formik";
 import * as yup from "yup";
 import Link from "next/link";
+import { toast } from "react-toastify";
 
-const LeaveComment = () => {
+const LeaveComment = ({row,page,link}) => {
   const initialValues = {
     name: "",
     email: "",
     comment: "",
+    page,
+    link
   };
+
+    const [TermsAndConditions, SetTermsandConditions] = useState(false);
 
   const validationSchema = yup.object({
     name: yup.string().required("Name is Required"),
@@ -22,8 +27,26 @@ const LeaveComment = () => {
     comment: yup.string().required("Comment is Required"),
   });
 
+  function AgreeTerms(e) {
+    SetTermsandConditions(e.target.checked);
+  }
+
   const handleSubmit = (values, { resetForm }) => {
-    console.log(values);
+   if (TermsAndConditions) {
+         console.log(values);
+         resetForm();
+       } else {
+         toast.error("Please Agree Terms & Conditions", {
+           position: "bottom-right",
+           autoClose: 5000,
+           hideProgressBar: false,
+           closeOnClick: false,
+           pauseOnHover: true,
+           draggable: true,
+           progress: undefined,
+           theme: "colored",
+         });
+       }
   };
 
   return (
@@ -63,16 +86,16 @@ const LeaveComment = () => {
                         className="text-danger mt-2"
                       />
                     </div>
-                    <div className="col-md-6 mt-5">
+                    <div className={`col-md-${row} mt-5`}>
                       <label className={LeaveCommentStyles["custom-checkbox"]}>
-                        <input type="checkbox" />
+                        <input type="checkbox"  />
                         <span className={LeaveCommentStyles["checkmark"]}></span>
-                        Save my name, email, and website in this browser for the
-                        next time I comment.
+                       <small> Save my name, email, and website in this browser for the
+                        next time I comment.</small>
                       </label>
                     </div>
                     <div className="col-md-6"></div>
-                    <div className="col-md-6 mt-3">
+                    <div className={`col-md-${row} mt-5`}>
                       <div className={LeaveCommentStyles["input-container"]}>
                         <i className="bx bx-pencil mb-5"></i>
                         <Field
@@ -93,7 +116,7 @@ const LeaveComment = () => {
                     <div className="row">
                       <div className="col-md-12 col-lg-7">
                         <div className="row">
-                        <div className="col-md-6">
+                        <div className={`col-md-${row}`}>
                           <button
                             type="submit"
                             className={LeaveCommentStyles["submit-btn"]}
@@ -101,9 +124,9 @@ const LeaveComment = () => {
                             <i className='bx bx-send'></i> LEAVE A COMMENT
                           </button>
                         </div>
-                        <div className="col-md-6 mt-4">
+                        <div className={`col-md-${row} mt-4`}>
                           <label className={LeaveCommentStyles["custom-checkbox"]}>
-                            <input type="checkbox" />
+                            <input type="checkbox" onChange={(e) => AgreeTerms(e)} />
                             <span
                               className={LeaveCommentStyles["checkmark"]}
                             ></span>

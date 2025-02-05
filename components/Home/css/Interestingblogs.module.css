@@ -47,10 +47,11 @@
   text-align: center;
 }
 
+
+
 .card {
   width: 100%;
   height: 100%;
-
   overflow: hidden;
   background: white;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -62,6 +63,7 @@
   height: 30vh;
   display: block;
   object-fit: cover;
+  transition-duration: 1s;
 }
 
 .content {
@@ -79,6 +81,7 @@
 .content .date {
   font-size: 14px;
   color: #777;
+  transition-duration: 0.5s;
 }
 
 .content h2 {
@@ -87,6 +90,21 @@
   margin-top: 8px;
   color: #222;
   text-align: left;
+}
+
+.content h2:hover{
+  color: #565656;
+}
+
+.content .date:hover {
+  color: #dae912;
+  transition-duration: 0.5s;
+
+}
+
+.read-more-btn{
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .arrow {
@@ -101,7 +119,7 @@
 }
 
 .arrow:hover {
-  color: #dae912;
+  color: #aeba0d;
 }
 
 @media (max-width: 991px) {

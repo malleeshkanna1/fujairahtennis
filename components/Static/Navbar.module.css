@@ -6,6 +6,17 @@
     padding: 20px;
     position: relative;
   }
+
+  .TransNavbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 20px;
+    position: relative;
+    z-index: 99;
+    margin-top: -112px;
+  }
   
   .logo a {
     color: white;

@@ -1,5 +1,6 @@
 import React from "react";
 import InterestingBlogsStyle from "./css/Interestingblogs.module.css";
+import Link from "next/link";
 
 const InterestingBlogs = () => {
   const blogPosts = [
@@ -40,23 +41,29 @@ const InterestingBlogs = () => {
             <div className="row">
               {blogPosts.map((data, i) => (
                 <div className="col-md-6 col-lg-4 mt-4 mt-lg-0" key={i}>
-                  <div className={InterestingBlogsStyle["card"]}>
-                    <div className={InterestingBlogsStyle["content"]}>
-                      <span className={InterestingBlogsStyle["blog"]}>BLOG</span>{" "}
-                      <span className={InterestingBlogsStyle["date"]}>
-                        {" "}
-                        &nbsp; • &nbsp; {data.date}
+                  <Link className="text-decoration-none" href={"/blog/" + data.link}>
+                    <div className={InterestingBlogsStyle["card"]}>
+                      <div className={InterestingBlogsStyle["content"]}>
+                        <span className={InterestingBlogsStyle["blog"]}>
+                          BLOG
+                        </span>{" "}
+                        <span className={InterestingBlogsStyle["date"]}>
+                          {" "}
+                          &nbsp; • &nbsp; {data.date}
+                        </span>
+                        <h2>{data.title}</h2>
+                      </div>
+                      <img
+                        src={"/images/blogs/" + data.image}
+                        alt={data.title}
+                      />
+                      <span
+                        className={InterestingBlogsStyle["arrow"]}
+                      >
+                        <i className="bx bx-right-arrow-alt"></i> <span className={InterestingBlogsStyle["read-more-btn"]}> READ MORE</span>
                       </span>
-                      <h2>{data.title}</h2>
                     </div>
-                    <img
-                      src={"/images/blogs/"+data.image}
-                      alt={data.title}
-                    />
-                    <a href={data.link} className={InterestingBlogsStyle["arrow"]}>
-                    <i className='bx bx-right-arrow-alt'></i>
-                    </a>
-                  </div>
+                  </Link>
                 </div>
               ))}
             </div>

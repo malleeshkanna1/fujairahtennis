@@ -5,7 +5,7 @@ import Image from "next/image";
 const FewWords = () => {
   return (
     <div className={FewWordsStyle["words-container"]}>
-      <div className="mt-3 mb-5 p-3">
+      <div className="mt-3 mb-5 p-3 container">
         <div className="row">
           {/* Content Section */}
           <div className="col-lg-6 d-block d-lg-flex align-items-stretch order-2 order-lg-1">

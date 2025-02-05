@@ -1,0 +1,115 @@
+.BlogImageWithCaptions {
+  height: 83vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative; /* Needed for positioning the overlay */
+  margin-top: -100px;
+}
+
+.text-muted{
+  color: #D2D3D5 !important;
+}
+
+.bgCOlor{
+  background-color: #F6F5F9;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.4;
+}
+
+.blogTitle {
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+.visible-content {
+  position: relative;
+  padding: 20px;
+  max-width:1200px ;
+}
+
+.spacer{
+  margin-top: 100px;
+  padding-bottom: 100px;
+}
+
+.link{
+  font-family: Montserrat, sans-serif ;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f0f0f;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.sub-heading{
+  color: #0f0f0f;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+
+.input-container {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px; /* Adjust as needed */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px; /* Adjust icon size */
+  color: gray;
+}
+
+.search-txtbox {
+  padding: 18px 18px 18px 42px; /* Adjust padding to avoid overlapping icon */
+  box-shadow: none !important;
+  width: 100%;
+  outline: none;
+  border: 1px solid rgb(214, 214, 214);
+  border-radius: 5px; /* Optional */
+}
+
+.search-txtbox:focus {
+  border: 1px solid rgb(214, 214, 214);
+}
+
+
+@media only screen and (max-width: 768px) {
+  .blogTitle {
+    font-size: 38px;
+  }
+  
+  .BlogImageWithCaptions{
+    height: 70vh;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .blogTitle {
+    font-size: 26px;
+  }
+
+  .BlogImageWithCaptions{
+    height: 60vh;
+  }
+}

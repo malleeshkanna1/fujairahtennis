@@ -30,7 +30,7 @@ const Home = () => {
         <ImagesGrid/>
         <StartYourMatch/>
         <InterestingBlogs/>
-        <LeaveComment/>
+        <LeaveComment row={6} page={'home'} link={''}/>
       </div>
     </>
   );
