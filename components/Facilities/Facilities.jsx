@@ -53,7 +53,7 @@ const Facilities = () => {
                    width={16}
                    height={9}
                     src={`/images/facilities/${data.link}.jpg`}
-                    alt=""
+                    alt={data.name}
                     className="img-fluid"
                   />
                 </div>

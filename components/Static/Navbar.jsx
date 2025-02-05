@@ -79,7 +79,7 @@ const Navbar = () => {
         {/* Left side: Logo */}
         <div className={styles.logo}>
           <Link href="/">
-            <img src="/images/common/logo.png" />
+            <img alt="Tennis & Country Club Fujairah" src="/images/common/logo.png" />
           </Link>
         </div>
 

@@ -151,10 +151,13 @@ const Tccf2018 = () => {
       </div>
       <div className="mt-5">
         <div className="d-flex justify-content-between ">
-        
+        <Link className={SingleNewsStyle["link"]} href='/event/participate-in-the-inaugural-local-tennis-tournament-at-tennis-and-country-club-fujairah'>
+          <i className="bx bx-left-arrow-alt"></i>  Prev 
+          </Link>
           <Link className={SingleNewsStyle["link"]} href='/event/train-with-the-best-at-tennis-country-club-fujairah'>
             Next <i className="bx bx-right-arrow-alt"></i> 
           </Link>
+     
         </div>
       </div>
     </div>

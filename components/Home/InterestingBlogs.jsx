@@ -27,7 +27,7 @@ const InterestingBlogs = () => {
     <div className={InterestingBlogsStyle["image-container"]}>
       <img
         src="/images/home/blogs-bg.jpg"
-        alt="Your Image"
+        alt=""
         className={InterestingBlogsStyle["image"]}
       />
       <div className={InterestingBlogsStyle["content-overlay"]}>
@@ -51,7 +51,7 @@ const InterestingBlogs = () => {
                     </div>
                     <img
                       src={"/images/blogs/"+data.image}
-                      alt="Tennis Player"
+                      alt={data.title}
                     />
                     <a href={data.link} className={InterestingBlogsStyle["arrow"]}>
                     <i className='bx bx-right-arrow-alt'></i>

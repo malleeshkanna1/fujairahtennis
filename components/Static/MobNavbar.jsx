@@ -45,7 +45,7 @@ const MobNavbar = ({ NavbarData }) => {
             <img
               src="/images/common/logo-cropped.png"
               className={MobNavbarStyle.tennis_country_logo}
-              alt="Logo"
+              alt="Tennis & Country Club Fujairah"
             />
           </div>
           <button
