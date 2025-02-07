@@ -11,19 +11,19 @@ import GrowingOurTennis from "./Contents/GrowingOurTennis";
 import SquashChampJunior from "./Contents/SquashChampJunior";
 import UaeSportsDay from "./Contents/UaeSportsDay";
 import NationalSportsDay from "./Contents/NationalSportsDay";
+import commonStyles from "../services/css/CommonStyle.module.css";
 
 const SingleBlog = ({ slug }) => {
   const blogsData = {
-    "tennis-and-country-club-fujairah-marks-national-sports-day-in-style":
-      {
-        bgImage: "FTCC-Tennis-winners.jpg",
-        blogtitle:
-          "Tennis and Country Club Fujairah marks National Sports Day in style",
-        date: "March 4, 2022",
-        comments: 0,
-        tag: "NEWS",
-        component: <NationalSportsDay />,
-      },
+    "tennis-and-country-club-fujairah-marks-national-sports-day-in-style": {
+      bgImage: "FTCC-Tennis-winners.jpg",
+      blogtitle:
+        "Tennis and Country Club Fujairah marks National Sports Day in style",
+      date: "March 4, 2022",
+      comments: 0,
+      tag: "NEWS",
+      component: <NationalSportsDay />,
+    },
     "tennis-country-club-fujairahs-squash-championship-gives-juniors-a-major-boost":
       {
         bgImage: "FTCC-2.jpg",
@@ -82,6 +82,35 @@ const SingleBlog = ({ slug }) => {
     currentIndex < blogSlugs.length - 1 ? blogSlugs[currentIndex + 1] : null;
 
   const currentData = blogsData[slug];
+
+  const getRelatedBlogs = (currentSlug) => {
+    const currentBlog = blogsData[currentSlug];
+
+    if (!currentBlog) return [];
+
+    const category = currentBlog.tag; // "BLOG" or "NEWS"
+    const filteredBlogs = Object.entries(blogsData)
+      .filter(([slug, blog]) => blog.tag === category && slug !== currentSlug)
+      .sort((a, b) => new Date(b[1].date) - new Date(a[1].date)) // Sorting by latest date
+      .slice(0, 2); // Taking top 2
+
+    return filteredBlogs.map(([slug, blog]) => ({
+      slug,
+      ...blog,
+    }));
+  };
+
+  const getLastAddedBlogs = (count = 2) => {
+    const blogEntries = Object.entries(blogsData);
+    return blogEntries.slice(-count).map(([slug, blog]) => ({ slug, ...blog }));
+  };
+
+  const lastTwoBlogs = getLastAddedBlogs();
+
+
+  // Usage Example
+  const currentSlug = slug;
+  const relatedBlogs = getRelatedBlogs(currentSlug);
 
   const shareText = currentData.blogtitle;
   const shareUrl = encodeURIComponent(
@@ -188,9 +217,40 @@ const SingleBlog = ({ slug }) => {
                 </div>
               </div>
               <LeaveComment page={"blog"} link={slug} row={12} />
+              <div className="mt-5">
+                <h3 className={commonStyles["sub-heading2"]}>
+                  You May Also Like
+                </h3>
+                <div className="mt-3">
+                  <div className="row">
+                    {relatedBlogs.map((data, i) => (
+                      <div className="col-md-6 d-flex align-items-stretch" key={i}>
+                        <Link href={`/blog/${data.slug}`} className="text-decoration-none">
+                        <div className={SingleBlogStyles["imageContainer"]}>
+                        <img
+                            className={SingleBlogStyles["imageThumbnail"]}
+                            src={`/images/blogs/${data.bgImage}`}
+                          />
+                        </div>
+                          
+                          <div className="mt-2">
+                            <small className={commonStyles["tagText"]}>
+                              {data.tag}
+                            </small>
+                            <div className="mt-3"></div>
+                            <h3 className={commonStyles["sub-heading"]}>
+                              {data.blogtitle}
+                            </h3>
+                          </div>
+                        </Link>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="col-lg-4">
-              <SideNav />
+            <div className="col-lg-4 mt-5 mt-lg-0">
+              <SideNav blogs={lastTwoBlogs} />
             </div>
           </div>
         </div>

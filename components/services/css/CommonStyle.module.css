@@ -30,6 +30,23 @@
   text-transform: uppercase;
 }
 
+.tagText{
+  color: #0f0f0f;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.date-text{
+  font-size: 13px;
+  color: #676767;
+  font-weight: 500;
+}
+
+.font-20{
+  font-size: 18px;
+}
+
 .green-highlight{
   color: #afd639;
 }
