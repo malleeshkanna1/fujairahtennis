@@ -1,0 +1,53 @@
+@keyframes tada {
+    0% { transform: scale(1); }
+    10%, 20% { transform: scale(1.1) rotate(-3deg); }
+    30%, 50%, 70% { transform: scale(1.1) rotate(3deg); }
+    40%, 60% { transform: scale(1.1) rotate(-3deg); }
+    100% { transform: scale(1); }
+  }
+  
+  .whatsapp-chat-bubble {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    animation: tada 1s ease-in-out infinite;
+    animation-delay: 3s; /* Initial delay before the first animation */
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+  }
+  
+  .whatsapp-chat-bubble:hover {
+    transform: scale(1.1);
+    background-color: #1ebe5d;
+    animation: none; /* Disable animation on hover */
+  }
+  
+  .whatsapp-chat-bubble i {
+    font-size: 30px;
+  }
+  
+  /* This ensures a 3-second gap between each tada animation */
+  @keyframes tada-loop {
+    0% { transform: scale(1); }
+    10%, 20% { transform: scale(1.1) rotate(-3deg); }
+    30%, 50%, 70% { transform: scale(1.1) rotate(3deg); }
+    40%, 60% { transform: scale(1.1) rotate(-3deg); }
+    100% { transform: scale(1); }
+  }
+  
+  .whatsapp-chat-bubble {
+    animation: tada-loop 4s infinite ease-in-out;
+  }
+  

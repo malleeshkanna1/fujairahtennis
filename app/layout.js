@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Static/Navbar";
 import { ToastContainer } from 'react-toastify';
 import CursorDot from "@/components/Static/CursorDot";
+import WhatsappChatBubble from "@/components/Static/WhatsappChatBubble";
 
 export default function RootLayout({ children }) {
   return (
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
         {children}
         <ToastContainer />
         <Footer/>
+        <WhatsappChatBubble/>
         <CursorDot/>
       </body>
     </html>
