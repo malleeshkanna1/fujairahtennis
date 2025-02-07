@@ -19,7 +19,7 @@ const SideNav = ({ blogs }) => {
         </div>
         <div className="mt-3">
           {blogs.map((data, i) => (
-            <div className="mt-4">
+            <div key={i} className="mt-4">
               <span className={commonStyles["tagText"]}>{data.tag}</span>
               <small className={commonStyles["date-text"]}>
                 {" "}
