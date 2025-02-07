@@ -1,74 +1,18 @@
 import React from "react";
 import SingleBlogStyles from "./css/SingleBlogs.module.css";
 import TransparentNav from "../Static/TransparentNav";
-import OvercomeTennisPressure from "./Contents/OvercomeTennisPressure";
 import SideNav from "./SideNav";
 import LeaveComment from "../Home/LeaveComment";
 import CopyToClip from "./CopyToClip";
 import Link from "next/link";
-import ManagingMind from "./Contents/ManagingMind";
-import GrowingOurTennis from "./Contents/GrowingOurTennis";
-import SquashChampJunior from "./Contents/SquashChampJunior";
-import UaeSportsDay from "./Contents/UaeSportsDay";
-import NationalSportsDay from "./Contents/NationalSportsDay";
+
 import commonStyles from "../services/css/CommonStyle.module.css";
 
+import Blogsdata from './BlogsData';
+
 const SingleBlog = ({ slug }) => {
-  const blogsData = {
-    "tennis-and-country-club-fujairah-marks-national-sports-day-in-style": {
-      bgImage: "FTCC-Tennis-winners.jpg",
-      blogtitle:
-        "Tennis and Country Club Fujairah marks National Sports Day in style",
-      date: "March 4, 2022",
-      comments: 0,
-      tag: "NEWS",
-      component: <NationalSportsDay />,
-    },
-    "tennis-country-club-fujairahs-squash-championship-gives-juniors-a-major-boost":
-      {
-        bgImage: "FTCC-2.jpg",
-        blogtitle:
-          "Tennis & Country Club Fujairah’s Squash Championship gives juniors a major boost",
-        date: "January 18, 2023",
-        comments: 0,
-        tag: "NEWS",
-        component: <SquashChampJunior />,
-      },
-    "tennis-and-country-club-fujairah-celebrates-uae-sports-day-with-full-spirit":
-      {
-        bgImage: "UAE-Sports-Day-2024.jpg",
-        blogtitle:
-          "Tennis and Country Club Fujairah celebrates UAE Sports Day with full spirit",
-        date: "March 9, 2024",
-        comments: 0,
-        tag: "NEWS",
-        component: <UaeSportsDay />,
-      },
-    "overcome-tennis-pressure-master-your-game": {
-      bgImage: "overcome.jpg",
-      blogtitle: "Overcome Tennis Pressure: Master Your Game",
-      date: "August 17, 2024",
-      comments: 0,
-      tag: "BLOG",
-      component: <OvercomeTennisPressure />,
-    },
-    "managing-your-mind-during-challenging-times": {
-      bgImage: "managing.jpg",
-      blogtitle: "Managing Your Mind During Challenging Times",
-      date: "August 17, 2024",
-      comments: 0,
-      tag: "BLOG",
-      component: <ManagingMind />,
-    },
-    "growing-our-tennis-program-through-free-trials": {
-      bgImage: "growing.jpg",
-      blogtitle: "Growing Our Tennis Program Through Free Trials",
-      date: "August 17, 2024",
-      comments: 0,
-      tag: "BLOG",
-      component: <GrowingOurTennis />,
-    },
-  };
+  
+  const blogsData = Blogsdata;
 
   // Extract all blog slugs into an array
   const blogSlugs = Object.keys(blogsData);
@@ -224,7 +168,7 @@ const SingleBlog = ({ slug }) => {
                 <div className="mt-3">
                   <div className="row">
                     {relatedBlogs.map((data, i) => (
-                      <div className="col-md-6 d-flex align-items-stretch" key={i}>
+                      <div className="col-md-6 d-flex mt-3 align-items-stretch" key={i}>
                         <Link href={`/blog/${data.slug}`} className="text-decoration-none">
                         <div className={SingleBlogStyles["imageContainer"]}>
                         <img

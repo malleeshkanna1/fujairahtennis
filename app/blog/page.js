@@ -1,3 +1,4 @@
+import BlogsList from "@/components/Blogs/BlogsList";
 import React from "react";
 
 export const metadata = {
@@ -27,8 +28,8 @@ export const metadata = {
   ],
 };
 
-const BlogsList = () => {
-  return <div>BlogsList</div>;
+const BlogsListPage = async({ searchParams }) => {
+  const {search} = await searchParams;
+  return <BlogsList search={search || ""} />;
 };
-
-export default BlogsList;
+export default BlogsListPage;
