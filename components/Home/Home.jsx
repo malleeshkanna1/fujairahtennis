@@ -11,6 +11,7 @@ import ImagesGrid from "./ImagesGrid";
 import StartYourMatch from "./StartYourMatch";
 import InterestingBlogs from "./InterestingBlogs";
 import LeaveComment from "./LeaveComment";
+import SubscribeModal from "../Static/SubscribeModal";
 
 const Home = () => {
 
@@ -31,6 +32,7 @@ const Home = () => {
         <StartYourMatch/>
         <InterestingBlogs/>
         <LeaveComment row={6} page={'home'} link={''}/>
+        <SubscribeModal/>
       </div>
     </>
   );

@@ -1,6 +1,7 @@
 import React from "react";
 import FooterStyles from "./Footer.module.css";
 import Link from "next/link";
+import NewsletterForm from "./NewsletterForm";
 
 const Footer = () => {
   return (
@@ -29,32 +30,7 @@ const Footer = () => {
                     <i className="bx bx-map"></i> Tennis & Country Club
                     Fujairah, Fujairah, United Arab Emirates
                   </div>
-                  <div className="mt-4">
-                    <p className={FooterStyles["headings"]}>Newsletter</p>
-                    <div className={FooterStyles["input-container"]}>
-                      <i className="bx bx-envelope"></i>
-                      <input
-                        type="text"
-                        name="email"
-                        placeholder="Enter Your Email"
-                      />
-                    </div>
-
-                    <label className={FooterStyles["custom-checkbox"]}>
-                      <input type="checkbox" />
-                      <span className={FooterStyles["checkmark"]}></span>
-                    </label>
-                    <small className={FooterStyles["termsandcond"]}>
-                      I agree to the <Link className="text-white" href="/privacy-policy">Privacy Policy</Link>.
-                    </small>
-
-                    <button
-                      type="submit"
-                      className={FooterStyles["submit-btn"]}
-                    >
-                      SUBSCRIBE
-                    </button>
-                  </div>
+                 <NewsletterForm/>
                 </div>
               </div>
               <div className="col-md-6 mt-4 d-block d-md-flex justify-content-center">

@@ -1,6 +1,5 @@
 import React from "react";
 import SideBarStyles from "../services/css/ContactUsStyles.module.css";
-import SingleBlogStyles from "./css/SingleBlogs.module.css";
 import commonStyles from "../services/css/CommonStyle.module.css";
 import Link from "next/link";
 import SearchTxtBox from "./SeachTxtBox";

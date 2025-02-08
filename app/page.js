@@ -19,7 +19,7 @@ export const metadata = {
     image: "/images/home/home-intro.png", // Twitter image
   },
   icons: {
-    icon: "/common/favicon.ico"
+    icon: "favicon.ico"
   },
 };
 

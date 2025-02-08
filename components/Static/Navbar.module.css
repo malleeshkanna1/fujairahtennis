@@ -195,6 +195,29 @@
     background-color: #235dd2;
   }
   
+  .modalImagePopup{
+    width: 100%;
+    min-height:70vh ;
+    object-fit: cover;
+  }
+
+  .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #333;
+    z-index: 10;
+  }
+  
+  .closeButton:hover {
+    color: red;
+  }
+  
+
   @media (max-width: 768px) {
     .navbar {
       text-align: center;
