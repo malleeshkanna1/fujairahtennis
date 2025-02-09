@@ -14,6 +14,9 @@ import BalletClasses from "./Contents/BalletClasses";
 import SquashLessons from "./Contents/SquashLessons";
 import ContactForm from "./ContactForm";
 import Restraunt from "./Contents/Restraunt";
+import Sauna from "./Contents/Sauna";
+import Jacuzzi from "./Contents/Jacuzzi";
+import SteamRoom from "./Contents/SteamRoom";
 
 const ServicesData = {
   "tennis-coaching": <TennisCoaching />,
@@ -27,6 +30,9 @@ const ServicesData = {
   "ballet-classes": <BalletClasses />,
   "squash-lessons": <SquashLessons />,
   "restaurant": <Restraunt/>,
+  "sauna": <Sauna/>,
+  "jacuzzi": <Jacuzzi/>,
+  "steam-room": <SteamRoom/>,
 };
 
 const ServicesNames = {
@@ -41,6 +47,9 @@ const ServicesNames = {
   "ballet-classes": "Ballet Classes",
   "squash-lessons": "Squash Lessons",
   "restaurant": "Restaurant",
+  "sauna": "Sauna",
+  "jacuzzi": "Jacuzzi",
+  "steam-room": "Steam Room",
 };
 
 

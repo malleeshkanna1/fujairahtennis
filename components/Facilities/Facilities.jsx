@@ -2,6 +2,7 @@ import React from "react";
 import FacilitiesStyles from "./css/Facilities.module.css";
 import Followus from "./Followus";
 import Image from "next/image";
+import Link from "next/link";
 
 const Facilities = () => {
   const allFacilitiesData = [
@@ -41,7 +42,7 @@ const Facilities = () => {
                 >
                   <h3>{data.name}</h3>
                   <p>{data.desc}</p>
-                  <button className={FacilitiesStyles["learn-btn"]}>MORE DETAILS</button>
+                  <Link href={'/services/'+data.link} className={FacilitiesStyles["learn-btn"]}>MORE DETAILS</Link>
                 </div>
                 <div
                   className={`col-md-6 mt-4 ${

@@ -21,6 +21,9 @@ const allowedSlugs = [
   "ballet-classes",
   "squash-lessons",
   "restaurant",
+  "sauna",
+  "jacuzzi",
+  "steam-room"
 ];
 
 const ServicesPage = async ({ params }) => {

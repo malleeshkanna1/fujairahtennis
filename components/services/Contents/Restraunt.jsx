@@ -1,6 +1,5 @@
 import React from "react";
 import CommonStyles from "../css/CommonStyle.module.css";
-import PaddleCoachingStyles from "../css/PaddleCoaching.module.css";
 import Image from "next/image";
 
 const Restaurant = () => {
