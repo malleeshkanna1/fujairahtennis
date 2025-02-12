@@ -317,7 +317,96 @@ const serviceMetadata = {
       "Casual dining UAE",
       "Family restaurant Fujairah",
     ],
-  }
+  },
+  sauna: {
+    title: "Sauna - Experience at Tennis & Country Club Fujairah",
+    description:
+      "Relax and rejuvenate in our premium sauna, designed for detoxification, stress relief, and muscle recovery. Exclusive to members.",
+    keywords: [
+      "Sauna",
+      "Detoxification",
+      "Muscle Recovery",
+      "Stress Relief",
+      "Wellness",
+      "Relaxation",
+      "Tennis & Country Club Fujairah",
+    ],
+    openGraph: {
+      title: "Luxury Sauna Experience at Tennis & Country Club Fujairah",
+      description:
+        "Relax and rejuvenate in our premium sauna, designed for detoxification, stress relief, and muscle recovery. Exclusive to members.",
+      image: "https://fujairahtennisclub.com/images/services/sauna.jpg",
+      type: "article",
+      publishedTime: "2025-02-07",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Luxury Sauna Experience at Tennis & Country Club Fujairah",
+      description:
+        "Relax and rejuvenate in our premium sauna, designed for detoxification, stress relief, and muscle recovery. Exclusive to members.",
+      image: "https://fujairahtennisclub.com/images/services/sauna.jpg",
+    },
+  },
+  jacuzzi: {
+    title: "Jacuzzi - Indulge in Relaxation at Tennis & Country Club Fujairah",
+    description:
+      "Experience ultimate relaxation and hydrotherapy benefits in our luxurious jacuzzi. Perfect for muscle relief, stress reduction, and overall well-being.",
+    keywords: [
+      "Jacuzzi",
+      "Hydrotherapy",
+      "Muscle Relaxation",
+      "Stress Relief",
+      "Wellness",
+      "Luxury Spa",
+      "Tennis & Country Club Fujairah",
+    ],
+    openGraph: {
+      title:
+        "Indulge in Relaxation with Our Jacuzzi at Tennis & Country Club Fujairah",
+      description:
+        "Experience ultimate relaxation and hydrotherapy benefits in our luxurious jacuzzi. Perfect for muscle relief, stress reduction, and overall well-being.",
+      image: "https://fujairahtennisclub.com/images/services/jacuzzi.jpg",
+      type: "article",
+      publishedTime: "2025-02-07",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title:
+        "Indulge in Relaxation with Our Jacuzzi at Tennis & Country Club Fujairah",
+      description:
+        "Experience ultimate relaxation and hydrotherapy benefits in our luxurious jacuzzi. Perfect for muscle relief, stress reduction, and overall well-being.",
+      image: "https://fujairahtennisclub.com/images/services/jacuzzi.jpg",
+    },
+  },
+  "steam-room": {
+    title: "Steam Room - Rejuvenate at Tennis & Country Club Fujairah",
+    description:
+      "Experience deep relaxation, improved circulation, and skin hydration in our luxurious steam room. The perfect retreat after a workout or long day.",
+    keywords: [
+      "Steam Room",
+      "Relaxation",
+      "Detoxification",
+      "Muscle Recovery",
+      "Skin Hydration",
+      "Wellness",
+      "Tennis & Country Club Fujairah",
+    ],
+    openGraph: {
+      title: "Rejuvenate in Our Steam Room at Tennis & Country Club Fujairah",
+      description:
+        "Experience deep relaxation, improved circulation, and skin hydration in our luxurious steam room. The perfect retreat after a workout or long day.",
+      image: "https://fujairahtennisclub.com/images/services/steam-room.jpg",
+      type: "article",
+      publishedTime: "2025-02-07",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Rejuvenate in Our Steam Room at Tennis & Country Club Fujairah",
+      description:
+        "Experience deep relaxation, improved circulation, and skin hydration in our luxurious steam room. The perfect retreat after a workout or long day.",
+      image: "https://fujairahtennisclub.com/images/services/steam-room.jpg",
+    },
+  },
 };
 
 export default serviceMetadata;
