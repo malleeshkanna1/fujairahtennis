@@ -166,7 +166,22 @@
   .subSubMenu li a {
     padding: 8px;
   }
+
+  .highlightmenu{
+    color: #aedb2b !important;
+  }
+
+  .logoTitle{
+    font-size: 10px;
+    width: 50%;
+    text-align: center;
+    text-transform: uppercase;
+  }
   
+  .btn-spacing{
+    margin-left: -220px;
+  }
+
   .subSubMenu li a:hover {
     background-color: #aedb2b;
   }
@@ -215,6 +230,19 @@
   
   .closeButton:hover {
     color: red;
+  }
+
+  @media (max-width: 1450px) {
+    .btn-spacing{
+      margin-left: 0px;
+      display: none
+    }
+  }
+ 
+  @media (max-width: 1080px) {
+    .logoTitle{
+      display: none;
+    }
   }
   
 

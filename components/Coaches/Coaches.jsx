@@ -151,7 +151,7 @@ const Coaches = () => {
                   )}
                 </div>
                 <div
-                  className={`col-md-6 mt-4 ${
+                  className={`col-md-6 mt-4 d-flex justify-content-center ${
                     i % 2 === 0 ? "order-md-1" : "order-md-2"
                   } order-1`}
                 >

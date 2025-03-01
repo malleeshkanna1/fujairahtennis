@@ -3,16 +3,50 @@ import FooterStyles from "./Footer.module.css";
 import Link from "next/link";
 import NewsletterForm from "./NewsletterForm";
 
+const quickLinks = [
+  { name: "Home", path: "/" },
+  { name: "About Us", path: "/about-us" },
+  { name: "Coaches", path: "/coaches" },
+  { name: "Facilities", path: "/facilities" },
+  { name: "Events", path: "/events" },
+  { name: "Contact Us", path: "/contact" },
+];
+
+const programs = [
+  "Tennis Coaching",
+  "Swimming Coaching",
+  "Paddle Coaching",
+  "Gym Training",
+  "Summer Camp",
+  "Restaurant",
+  "Gymnastic Class",
+  "Kickboxing Class",
+  "Personal Training",
+  "Ballet Classes",
+  "Squash Lessons",
+].map((program) => ({ name: program, path: `/services/${program.toLowerCase().replace(/ /g, "-")}` }));
+
+const socialLinks = [
+  { name: "Facebook", icon: "bxl-facebook", url: "https://www.facebook.com/TennisCountryClubFujairah" },
+  { name: "Tiktok", icon: "bxl-tiktok", url: "/" },
+  { name: "Instagram", icon: "bxl-instagram", url: "https://www.instagram.com/tccfjr/?hl=en" },
+];
+
+const contactDetails = [
+  { icon: "bx-envelope", text: "info@fujairahtennisclub.ae", href: "mailto:info@fujairahtennisclub.ae" },
+  { icon: "bx-phone", text: "+97192244880", href: "tel:+97192244880" },
+];
+
 const Footer = () => {
   return (
     <div className={FooterStyles["footer-container"]}>
       <div className="container-lg pt-5 pb-5">
         <div className="row">
-          <div className="col-md-6 col-lg-4">
+          <div className="col-md-12 col-lg-6 col-xl-5">
             <div className="row">
-              <div className="col-md-6">
+            <div className="col-md-6">
                 <div className="row">
-                  <div className="col-12 col-md-4 d-flex align-items-center justify-content-center ">
+                  <div className="col-12 p-1 col-md-4 d-flex align-items-center justify-content-center justify-content-md-end ">
                     <img
                       className={FooterStyles["company-logo"]}
                       src="/images/common/logo.png"
@@ -36,124 +70,50 @@ const Footer = () => {
               <div className="col-md-6 mt-4 d-block d-md-flex justify-content-center">
                 <div>
                   <p className={FooterStyles["menu-heading"]}>QUICK LINKS</p>
-                  <div className="mt-4">
-                    <ul className={FooterStyles["footer-links"]}>
-                      <li>
-                        <Link href="/">Home</Link>
+                  <ul className={FooterStyles["footer-links"]}>
+                    {quickLinks.map((link) => (
+                      <li className={FooterStyles["list-style-none"]} key={link.name}>
+                       <h3 className="d-inline">&#8226;</h3>   <Link href={link.path}>{link.name}</Link>
                       </li>
-                      <li>
-                        <Link href="/about-us">About Us</Link>
-                      </li>
-                      <li>
-                        <Link href="/coaches">Coaches</Link>
-                      </li>
-                      <li>
-                        <Link href="/facilities">Facilities</Link>
-                      </li>
-                      <li>
-                        <Link href="/events">Events</Link>
-                      </li>
-                      <li>
-                        <Link href="/contact">Contact Us</Link>
-                      </li>
-                    </ul>
-                  </div>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-md-6 col-lg-4">
+          <div className="col-md-12 col-lg-6 col-xl-4 mt-0 mt-md-3 mt-lg-0">
             <div className="row">
               <div className="col-md-6 mt-4">
                 <p className={FooterStyles["menu-heading"]}>OUR PROGRAMS</p>
-                <div className="mt-4">
-                  <ul className={FooterStyles["footer-links"]}>
-                    <li>
-                      <Link href="/services/tennis-coaching">
-                        Tennis Coaching
-                      </Link>
+                <ul className={FooterStyles["footer-links"]}>
+                  {programs.map((program) => (
+                    <li className={FooterStyles["list-style-none"]} key={program.name}>
+                     <h3 className="d-inline">&#8226;</h3> <Link href={program.path}>{program.name}</Link>
                     </li>
-                    <li>
-                      <Link href="/services/swimming-coaching">
-                        Swimming Coaching
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/paddle-coaching">
-                        Paddle Coaching
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/gym-training">Gym Training</Link>
-                    </li>
-                    <li>
-                      <Link href="/services/summer-camp">Summer Camp</Link>
-                    </li>
-                    <li>
-                      <Link href="/services/restaurant">Restaurant</Link>
-                    </li>
-                    <li>
-                      <Link href="/services/gymnastic-class">
-                        Gymnastic Class
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/kickboxing-class">
-                        Kickboxing Class
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/personal-training">
-                        Personal Training
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/ballet-classes">
-                        Ballet Classes
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/squash-lessons">
-                        Squash Lessons
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
+                  ))}
+                </ul>
               </div>
               <div className="col-md-6 mt-4">
                 <p className={FooterStyles["menu-heading"]}>SOCIAL</p>
-                <div className="mt-4">
-                  <ul className={FooterStyles["footer-links"]}>
-                    <li className={FooterStyles["list-style-none"]}>
-                      <i className="bx bxl-facebook"></i> <a target="_blank" href="https://www.facebook.com/TennisCountryClubFujairah">Facebook</a> 
+                <ul className={FooterStyles["footer-links"]}>
+                  {socialLinks.map((social) => (
+                    <li key={social.name} className={FooterStyles["list-style-none"]}>
+                      <i className={`bx ${social.icon}`}></i> <a target="_blank" href={social.url}>{social.name}</a>
                     </li>
-                    <li className={FooterStyles["list-style-none"]}>
-                      <i className="bx bxl-tiktok"></i> <a target="_blank" href="/">Tiktok</a> 
-                    </li>
-                    <li className={FooterStyles["list-style-none"]}>
-                      <i className="bx bxl-instagram"></i> <a target="_blank" href="https://www.instagram.com/tccfjr/?hl=en">Instagram</a> 
-                    </li>
-                  </ul>
-                </div>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
-          <div className="col-md-6 col-lg-4 mt-4">
+          <div className="col-md-12 col-lg-6 col-xl-3 mt-4">
             <p className={FooterStyles["menu-heading"]}>SAY HELLO</p>
-            <div className="mt-4">
-              <ul className={FooterStyles["footer-links"]}>
-                <li className={FooterStyles["list-style-none"]}>
-                  <i className="bx bx-envelope"></i>{" "}
-                  <a href="mailto:info@fujairahtennisclub.ae">
-                    info@fujairahtennisclub.ae
-                  </a>
+            <ul className={FooterStyles["footer-links"]}>
+              {contactDetails.map((contact, index) => (
+                <li key={index} className={FooterStyles["list-style-none"]}>
+                  <i className={`bx ${contact.icon}`}></i> <a href={contact.href}>{contact.text}</a>
                 </li>
-                <li className={FooterStyles["list-style-none"]}>
-                  <i className="bx bx-phone"></i>{" "}
-                  <a href="tel:+97192244880">+97192244880</a>
-                </li>
-              </ul>
-            </div>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

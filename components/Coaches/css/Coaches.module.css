@@ -53,8 +53,8 @@
 }
 
 .facility-content img {
-  width: auto;
-  height: 400px;
+  width: auto !important;
+  height: 400px !important;
 }
 
 .learn-btn {

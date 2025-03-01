@@ -31,7 +31,7 @@ const StartYourMatch = () => {
   };
 
   return (
-    <div className="container" onMouseMove={isDesktop ?handleMouseMove:null}>
+    <div className="" onMouseMove={isDesktop ?handleMouseMove:null}>
       <div className={StartMatchStyle["start-match-container"]}>
         <h2 className={StartMatchStyle["start-text"]}>Start Your</h2>
         <img

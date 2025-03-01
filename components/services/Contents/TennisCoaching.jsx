@@ -62,7 +62,7 @@ export const TennisCoaching = () => {
             <div className="mt-5 text-center">
               <h2 className={CommonStyles["sub-heading2"]}>Coaching Plans</h2>
               <div className="mt-5"></div>
-              <h3 className={CommonStyles["sub-heading"]}>prices</h3>
+              <h3 className={CommonStyles["sub-heading"]}>Pricing</h3>
             </div>
             <div className="mt-5">
               <div className="row">

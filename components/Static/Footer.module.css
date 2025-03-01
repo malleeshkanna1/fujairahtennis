@@ -125,6 +125,10 @@
   margin-right: 8px;
 }
 
+.list-style-none{
+  list-style: none;
+}
+
 .custom-checkbox input:checked + .checkmark::after {
   content: "●"; /* Unicode dot character */
   font-size: 20px;

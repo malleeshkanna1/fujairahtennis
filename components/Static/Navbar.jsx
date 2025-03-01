@@ -7,6 +7,27 @@ import MobNavbar from "./MobNavbar";
 const Navbar = () => {
   const [isFixed, setFixedState] = useState(false);
 
+  const [currentRoute, SetCurrentRoute] = useState();
+
+  useEffect(() => {
+    if (typeof window !== "undefined") { 
+      SetCurrentRoute(window.location.pathname);
+      const handleUserAction = (event) => {
+        if (event.target.tagName.toLowerCase() === "a") {
+          setTimeout(() => {
+            SetCurrentRoute(window.location.pathname);
+          }, 1000);
+        }
+      };
+
+      window.addEventListener("click", handleUserAction);
+
+      return () => {
+        window.removeEventListener("click", handleUserAction);
+      };
+    }
+  }, []);
+
   const NavbarData = [
     {
       title: "Home",
@@ -30,14 +51,23 @@ const Navbar = () => {
           dropdown: true,
           dropdownItems: [
             { route: "/services/tennis-coaching", title: "Tennis Coaching" },
-            { route: "/services/swimming-coaching", title: "Swimming Coaching" },
+            {
+              route: "/services/swimming-coaching",
+              title: "Swimming Coaching",
+            },
             { route: "/services/paddle-coaching", title: "Paddle Coaching" },
             { route: "/services/gym-training", title: "Gym Training" },
             { route: "/services/summer-camp", title: "Summer Camp" },
             { route: "/services/gymnastic-class", title: "Gymnastic Class" },
             { route: "/services/kickboxing-class", title: "Kickboxing Class" },
-            { route: "/services/personal-training", title: "Personal Training" },
-            { route: "/services/personal-training", title: "Personal Training" },
+            {
+              route: "/services/personal-training",
+              title: "Personal Training",
+            },
+            {
+              route: "/services/personal-training",
+              title: "Personal Training",
+            },
             { route: "/services/ballet-classes", title: "Ballet Classes" },
             { route: "/services/squash-lessons", title: "Squash Lessons" },
           ],
@@ -74,12 +104,22 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className={isFixed ? 'fixed-top animate__slideInDown animate__animated':''}>
+    <div
+      className={
+        isFixed ? "fixed-top animate__slideInDown animate__animated" : ""
+      }
+    >
       <nav className={styles.navbar}>
         {/* Left side: Logo */}
         <div className={styles.logo}>
-          <Link href="/">
-            <img alt="Tennis & Country Club Fujairah" src="/images/common/logo.png" />
+          <Link className="d-flex align-items-center" href="/">
+            <img
+              alt="Tennis & Country Club Fujairah"
+              src="/images/common/logo.png"
+            />
+            <small className={styles.logoTitle}>
+              Tennis & country club Fujairah
+            </small>
           </Link>
         </div>
 
@@ -94,7 +134,14 @@ const Navbar = () => {
                 >
                   {/* Render Link for items without dropdown */}
                   {!item.dropdown ? (
-                    <Link href={item.route}>{item.title}</Link>
+                    <Link
+                      className={
+                        currentRoute == item.route ? styles.highlightmenu : ""
+                      }
+                      href={item.route}
+                    >
+                      {item.title}
+                    </Link>
                   ) : (
                     // Render Dropdown for items with dropdown
                     <>
@@ -112,7 +159,14 @@ const Navbar = () => {
                                       {dropdownItem.dropdownItems.map(
                                         (subItem, subIdx) => (
                                           <li key={subIdx}>
-                                            <Link href={subItem.route}>
+                                            <Link
+                                              className={
+                                                currentRoute == subItem.route
+                                                  ? styles.highlightmenu
+                                                  : ""
+                                              }
+                                              href={subItem.route}
+                                            >
                                               {subItem.title}
                                             </Link>
                                           </li>
@@ -122,7 +176,14 @@ const Navbar = () => {
                                   </div>
                                 </div>
                               ) : (
-                                <Link href={dropdownItem.route}>
+                                <Link
+                                  className={
+                                    currentRoute == dropdownItem.route
+                                      ? styles.highlightmenu
+                                      : ""
+                                  }
+                                  href={dropdownItem.route}
+                                >
                                   {dropdownItem.title}
                                 </Link>
                               )}
@@ -146,6 +207,7 @@ const Navbar = () => {
             </Link>
           </div>
         </div>
+        <div className={styles["btn-spacing"]}></div>
         <div className="d-flex d-lg-none">
           <div className={styles["search-icon"]}>
             <i className="bx bx-search text-white"></i>
